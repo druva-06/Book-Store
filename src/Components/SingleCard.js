@@ -1,6 +1,8 @@
 
 const SingleCard = ({book,setClickBook}) => {
 
+    console.log(book)
+
     function getDarkColor() {
         var color = '#';
         for (var i = 0; i < 6; i++) {

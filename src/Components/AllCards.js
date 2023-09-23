@@ -6,10 +6,7 @@ const AllCards = ({booksData,setClickBook}) => {
         <div className="all-cards">
             {
                 booksData.map((element) => {
-                    return <SingleCard
-                    book = {element}
-                    setClickBook = {setClickBook}
-                    />
+                    return element.volumeInfo.imageLinks!==undefined && <SingleCard book = {element} setClickBook = {setClickBook}/>
                 })
             }
         </div>
