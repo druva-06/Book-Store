@@ -28,13 +28,16 @@ const Main = ({search}) => {
 
     useEffect(() => {
         setBooksData([])
+        setClickBook(null)
         if(search!=='')
             loadBooks(search)
     },[search])
 
     return (
         <div className="main">
-            <DetailCard/>
+            {clickBook!==null && <DetailCard
+            clickBook = {clickBook}
+            />}
             <AllCards
             booksData = {booksData}
             setClickBook = {setClickBook}

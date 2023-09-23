@@ -1,7 +1,7 @@
 import SingleCard from "./SingleCard"
 
 const AllCards = ({booksData,setClickBook}) => {
-    console.log(booksData)
+
     return (
         <div className="all-cards">
             {

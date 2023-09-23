@@ -100,6 +100,7 @@ body{
 .main > .detail-card > img{
     transform: rotate(-5deg);
     padding-right: 10px;
+    height: 200px;
     background-color: white;
     z-index: 10;
 }
@@ -186,6 +187,7 @@ body{
 .single-card > img{
     transform: rotate(-5deg);
     width: 150px;
+    height: 200px;
     padding-right: 10px;
     background-color: white;
     z-index: 10;
@@ -209,7 +211,7 @@ body{
 .single-card-content .title{
     height: 23px;
     max-width: 250px;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     font-weight: 600;
     align-items: center;
