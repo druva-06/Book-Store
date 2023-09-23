@@ -1,15 +1,21 @@
 
 const SingleCard = ({book,setClickBook}) => {
 
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    function getDarkColor() {
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += Math.floor(Math.random() * 10);
+        }
+        return color;
+    }
 
     return (
-        <div className="single-card">
+        <div onClick={() => setClickBook(book)} className="single-card">
             <img src={book.volumeInfo.imageLinks.thumbnail} alt="Loading.."/>
-            <div style={ {backgroundColor:`#${randomColor}`} } className="single-card-content">
+            <div style={ {backgroundColor: getDarkColor()} } className="single-card-content">
                 <p className="title">{book.volumeInfo.title}</p>
                 <p className="description">Description - {book.volumeInfo.description}</p>
-                <button onClick={() => setClickBook(book)}>Know More!</button>
+                <button>Know More!</button>
             </div>
         </div>
     )
