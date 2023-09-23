@@ -11,8 +11,13 @@ const SingleCard = ({book,setClickBook}) => {
         return color;
     }
 
+    const implementKnowMore = () => {
+        setClickBook(book)
+        window.open('#','_self')
+    }
+
     return (
-        <div onClick={() => setClickBook(book)} className="single-card">
+        <div onClick={implementKnowMore} className="single-card">
             <img src={book.volumeInfo.imageLinks.thumbnail} alt="Loading.."/>
             <div style={ {backgroundColor: getDarkColor()} } className="single-card-content">
                 <p className="title">{book.volumeInfo.title}</p>
